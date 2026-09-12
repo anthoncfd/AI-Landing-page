@@ -37,7 +37,7 @@
             --radius-pill: 9999px;
             
             --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.05);
-            --shadow-card: 0 4px 12px -2px rgba(0, 0, 0, 0.05);
+            --shadow-card: 0 4px 16px -2px rgba(0, 0, 0, 0.06);
             --shadow-btn: 0 8px 20px -4px rgba(37, 99, 235, 0.35);
         }
 
@@ -95,7 +95,7 @@
         }
 
         /* ==========================================================================
-           3. TOP HEADER BAR WITH SUBTLE DIVIDER LINE
+           3. TOP HEADER BAR
            ========================================================================== */
         .header-top-bar-wrapper {
             position: relative;
@@ -104,7 +104,7 @@
             border-bottom: 1px solid var(--color-border-light);
             padding: 12px 0 16px 0;
             margin-top: 4px;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
 
         .header-top-bar-container {
@@ -113,8 +113,9 @@
             justify-content: space-between;
             gap: 12px;
             width: 100%;
-            max-width: 1000px;
+            max-width: 960px;
             margin: 0 auto;
+            padding: 0 8px;
         }
 
         .header-logo-block {
@@ -193,11 +194,11 @@
         }
 
         /* ==========================================================================
-           4. HERO SECTION & SUBTLE BLUE DOODLE ANNOTATION
+           4. HERO SECTION & ACCURATE DOODLE ARROW
            ========================================================================== */
         .page-content-wrapper {
             width: 100%;
-            max-width: 1000px;
+            max-width: 960px;
             margin: 0 auto;
             padding: 0 0 20px 0;
             display: flex;
@@ -207,14 +208,11 @@
         .entrance-notice-banner {
             background: transparent;
             border: none;
-            border-radius: 0;
             padding: 2px 0 10px 0;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             text-align: center;
-            box-shadow: none;
         }
 
-        /* REDUCED FONT SIZE FOR NOTICE BANNER */
         .entrance-notice-banner p {
             font-size: 13px;
             font-weight: 500;
@@ -226,13 +224,15 @@
         .hero-text-stack {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 14px;
             text-align: center;
             padding: 0 8px;
+            max-width: 820px;
+            margin: 0 auto;
         }
 
         .hero-step-1 {
-            font-size: clamp(15px, 4vw, 20px);
+            font-size: clamp(14px, 3.5vw, 18px);
             font-weight: 800;
             letter-spacing: 0.08em;
             text-transform: uppercase;
@@ -240,31 +240,32 @@
         }
 
         .hero-step-2 {
-            font-size: clamp(32px, 8.5vw, 52px);
-            line-height: 1.18;
+            font-size: clamp(30px, 7vw, 48px);
+            line-height: 1.15;
             font-weight: 900;
             color: #000000;
             letter-spacing: -0.03em;
         }
 
+        /* HERO MEDIA CONTAINER WITH ACCURATELY TARGETED DOODLE ARROW */
         .hero-media-container {
             position: relative;
             width: 100%;
-            max-width: 460px;
-            margin: 32px auto 20px auto;
-            padding: 0 12px;
+            max-width: 420px;
+            margin: 36px auto 24px auto;
+            padding: 0;
         }
 
-        /* SUBTLE BLUE DOODLE ARROW (CROSS-DEVICE SAFE) */
+        /* EXACT POSITIONING FOR $2029.56 TARGETING */
         .doodle-arrow-svg {
             position: absolute;
-            top: -46px;
-            right: 18%;
-            width: 85px;
-            height: 105px;
+            top: -48px;
+            right: 8%;
+            width: 120px;
+            height: 110px;
             pointer-events: none;
             z-index: 10;
-            filter: drop-shadow(0px 1px 3px rgba(37, 99, 235, 0.2));
+            filter: drop-shadow(0px 2px 4px rgba(37, 99, 235, 0.25));
         }
 
         .hero-media-image {
@@ -278,16 +279,20 @@
         }
 
         .hero-step-3 {
-            font-size: clamp(20px, 5vw, 26px);
+            font-size: clamp(19px, 4.5vw, 24px);
             line-height: 1.45;
             font-weight: 600;
             color: var(--color-text-primary);
+            max-width: 720px;
+            margin: 0 auto;
         }
 
         .hero-step-4 {
-            font-size: clamp(17px, 4.2vw, 22px);
-            line-height: 1.5;
+            font-size: clamp(16px, 3.8vw, 20px);
+            line-height: 1.55;
             color: var(--color-text-secondary);
+            max-width: 680px;
+            margin: 0 auto;
         }
 
         /* ==========================================================================
@@ -297,7 +302,7 @@
             display: flex;
             justify-content: center;
             width: 100%;
-            margin: 24px 0 28px 0;
+            margin: 28px 0 32px 0;
             padding: 0 8px;
         }
 
@@ -307,11 +312,12 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            min-height: 62px;
-            padding: 12px 20px;
+            max-width: 440px;
+            min-height: 60px;
+            padding: 12px 24px;
             background-color: var(--color-accent-blue);
             color: var(--color-text-inverse) !important;
-            font-size: clamp(18px, 4.8vw, 22px);
+            font-size: clamp(18px, 4.5vw, 22px);
             font-weight: 700;
             text-decoration: none;
             border-radius: var(--radius-pill);
@@ -330,38 +336,45 @@
         }
 
         /* ==========================================================================
-           6. CONTENT SECTIONS & COMPACT JOIN.JPG CONTAINER
+           6. CONTENT SECTIONS & DESKTOP CARD WRAPPERS
            ========================================================================== */
         .content-section-divider {
             width: 100%;
             border-top: 1px solid var(--color-border-light);
-            padding-top: 24px;
-            margin-top: 20px;
+            padding-top: 32px;
+            margin-top: 24px;
         }
 
         .section-heading-title {
-            font-size: clamp(26px, 7vw, 36px);
+            font-size: clamp(24px, 6vw, 34px);
             font-weight: 800;
             color: #000000;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
             text-align: center;
             letter-spacing: -0.025em;
             padding: 0 8px;
         }
 
-        .story-paragraph-text {
-            font-size: clamp(18px, 4.5vw, 22px);
-            line-height: 1.6;
-            color: var(--color-text-secondary);
-            margin-bottom: 18px;
-            text-align: left;
+        /* ELEVATED CONTAINER FOR SHORT STORY */
+        .story-card-wrapper {
+            background-color: transparent;
             padding: 0 8px;
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .story-paragraph-text {
+            font-size: clamp(17px, 4.2vw, 21px);
+            line-height: 1.65;
+            color: var(--color-text-secondary);
+            margin-bottom: 20px;
+            text-align: left;
         }
 
         .curriculum-image-container {
             width: 100%;
-            max-width: 520px;
-            margin: 16px auto 24px auto;
+            max-width: 500px;
+            margin: 20px auto 28px auto;
             padding: 0 8px;
         }
 
@@ -375,11 +388,10 @@
             box-shadow: var(--shadow-card);
         }
 
-        /* REDUCED SIZE SPECIFICALLY FOR JOIN.JPG */
         .join-image-container {
             width: 100%;
-            max-width: 300px;
-            margin: 16px auto 20px auto;
+            max-width: 280px;
+            margin: 20px auto 24px auto;
             padding: 0 8px;
         }
 
@@ -393,39 +405,40 @@
             box-shadow: var(--shadow-card);
         }
 
+        /* SESSIONS LAYOUT */
         .sessions-list-stack {
             display: flex;
             flex-direction: column;
-            gap: 28px;
+            gap: 24px;
             width: 100%;
             text-align: center;
             padding: 0 8px;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .session-info-card {
-            background-color: transparent;
-            padding: 0;
-            border: none;
-            border-radius: 0;
-            box-shadow: none;
+            background-color: var(--color-bg-surface);
+            padding: 24px 20px;
+            border: 1px solid var(--color-border-light);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-subtle);
             text-align: center;
         }
 
         .session-card-header {
-            font-size: clamp(19px, 4.8vw, 22px);
+            font-size: clamp(17px, 4.2vw, 20px);
             font-weight: 800;
             color: var(--color-accent-blue);
-            margin-bottom: 6px;
+            margin-bottom: 8px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
         .session-card-body {
-            font-size: clamp(18px, 4.5vw, 20px);
+            font-size: clamp(16px, 4vw, 18px);
             color: var(--color-text-secondary);
             line-height: 1.55;
-            max-width: 680px;
-            margin: 0 auto;
         }
 
         /* ==========================================================================
@@ -434,19 +447,23 @@
         .urgency-footer-card {
             background-color: #000000;
             color: #ffffff;
-            padding: 28px 18px;
-            margin-top: 28px;
+            padding: 32px 24px;
+            margin-top: 36px;
             border-radius: var(--radius-lg);
             border: 1px solid #1a1a1a;
             width: 100%;
+            max-width: 860px;
+            margin-left: auto;
+            margin-right: auto;
             text-align: center;
+            box-shadow: var(--shadow-card);
         }
 
         .urgency-badge-label {
             background-color: var(--color-accent-blue);
             color: #ffffff;
             font-weight: 800;
-            font-size: 14px;
+            font-size: 13px;
             text-transform: uppercase;
             letter-spacing: 0.8px;
             padding: 5px 16px;
@@ -456,14 +473,14 @@
         }
 
         .urgency-subtext-copy {
-            font-size: 18px;
-            color: #ffffff;
+            font-size: 17px;
+            color: #e2e8f0;
             line-height: 1.45;
             margin-bottom: 16px;
         }
 
         .urgency-headline-bold {
-            font-size: clamp(20px, 5.5vw, 28px);
+            font-size: clamp(20px, 5vw, 26px);
             font-weight: 800;
             margin-top: 10px;
             margin-bottom: 12px;
@@ -472,24 +489,27 @@
         }
 
         .urgency-footer-caption {
-            font-size: 16px;
-            color: #ffffff;
+            font-size: 15px;
+            color: #94a3b8;
         }
 
         /* ==========================================================================
-           8. FAQ SECTION
+           8. FAQ SECTION (DESKTOP GRID ENHANCED)
            ========================================================================== */
         .faq-section-container {
             background-color: #000000;
             border-radius: var(--radius-lg);
-            padding: 32px 16px;
+            padding: 36px 20px;
             margin-top: 36px;
             color: #ffffff;
             border: 1px solid #1a1a1a;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .faq-header-title {
-            font-size: clamp(24px, 6vw, 32px);
+            font-size: clamp(22px, 5.5vw, 30px);
             font-weight: 800;
             color: #ffffff;
             text-align: center;
@@ -497,10 +517,10 @@
         }
 
         .faq-subtitle {
-            font-size: 16px;
+            font-size: 15px;
             color: #a1a1aa;
             text-align: center;
-            margin-bottom: 24px;
+            margin-bottom: 28px;
         }
 
         .faq-grid-stack {
@@ -513,7 +533,7 @@
             background-color: #111111;
             border: 1px solid #222222;
             border-radius: var(--radius-md);
-            padding: 18px 16px;
+            padding: 20px 18px;
             transition: border-color 0.2s ease;
         }
 
@@ -522,7 +542,7 @@
         }
 
         .faq-question-text {
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 700;
             color: #ffffff;
             margin-bottom: 8px;
@@ -541,7 +561,7 @@
         }
 
         .faq-answer-text {
-            font-size: 16px;
+            font-size: 15px;
             color: #d4d4d8;
             line-height: 1.55;
         }
@@ -564,7 +584,7 @@
         }
 
         .footer-content-inner {
-            max-width: 1000px;
+            max-width: 960px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
@@ -593,7 +613,7 @@
         }
 
         .footer-headline-text {
-            font-size: clamp(24px, 6vw, 36px);
+            font-size: clamp(22px, 5.5vw, 32px);
             font-weight: 800;
             color: #ffffff;
             line-height: 1.25;
@@ -614,8 +634,8 @@
             background-color: #2563eb;
             color: #ffffff !important;
             font-weight: 700;
-            font-size: 16px;
-            padding: 12px 28px;
+            font-size: 15px;
+            padding: 11px 26px;
             border-radius: var(--radius-pill);
             text-decoration: none;
             transition: background-color 0.15s ease, transform 0.15s ease;
@@ -634,8 +654,8 @@
             color: #ffffff !important;
             border: 1.5px solid #ffffff;
             font-weight: 700;
-            font-size: 16px;
-            padding: 11px 26px;
+            font-size: 15px;
+            padding: 10px 24px;
             border-radius: var(--radius-pill);
             text-decoration: none;
             transition: background-color 0.15s ease, color 0.15s ease;
@@ -672,7 +692,7 @@
         }
 
         /* ==========================================================================
-           10. STICKY PREMIUM WHATSAPP FLOATING BUTTON
+           10. STICKY WHATSAPP FLOATING BUTTON
            ========================================================================== */
         .whatsapp-sticky-float {
             position: fixed;
@@ -704,9 +724,9 @@
         }
 
         /* ==========================================================================
-           11. RESPONSIVE BREAKPOINTS
+           11. RESPONSIVE DESKTOP ENHANCEMENTS (768px+)
            ========================================================================== */
-        @media (min-width: 640px) {
+        @media (min-width: 768px) {
             body {
                 padding: 0 24px;
             }
@@ -717,28 +737,54 @@
             }
 
             .flip-clock-grid {
-                max-width: 280px;
+                max-width: 260px;
                 gap: 6px;
             }
 
             .flip-card-face {
-                height: 32px;
+                height: 30px;
             }
 
             .flip-digit-display {
-                font-size: 16px;
+                font-size: 15px;
             }
 
+            /* REFINED ACCURATE ARROW ADJUSTMENT FOR DESKTOP */
             .doodle-arrow-svg {
-                top: -54px;
-                right: 20%;
-                width: 105px;
-                height: 125px;
+                top: -52px;
+                right: 10%;
+                width: 135px;
+                height: 120px;
             }
 
-            .btn-call-to-action {
-                max-width: 480px;
-                font-size: 24px;
+            /* STORY CARD ELEVATED CONTAINER */
+            .story-card-wrapper {
+                background-color: var(--color-bg-surface);
+                border: 1px solid var(--color-border-light);
+                border-radius: var(--radius-lg);
+                padding: 36px 40px;
+                box-shadow: var(--shadow-card);
+            }
+
+            /* SESSIONS 3-COLUMN GRID */
+            .sessions-list-stack {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 16px;
+            }
+
+            .session-info-card {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                height: 100%;
+            }
+
+            /* FAQ 2-COLUMN GRID */
+            .faq-grid-stack {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
             }
 
             .footer-banner-row {
@@ -807,7 +853,7 @@
     <!-- MAIN PAGE CONTENT -->
     <main class="page-content-wrapper">
 
-        <!-- ENTRANCE BANNER (SUBTLE, LITTLE FONT SIZE) -->
+        <!-- ENTRANCE BANNER -->
         <div class="entrance-notice-banner">
             <p>Listen: You must have a good working phone (From 4GB RAM up) or a Laptop to build.</p>
         </div>
@@ -822,14 +868,14 @@
                 I Used This Skill to Clear My Debts and Still Had $2,000 Left.
             </h1>
 
-            <!-- HERO MEDIA CONTAINER WITH SUBTLE BLUE DOODLE ARROW -->
+            <!-- HERO MEDIA CONTAINER WITH ACCURATELY TARGETED BLUE DOODLE ARROW -->
             <div class="hero-media-container" id="heroImageBlock">
-                <!-- Subtle Blue SVG Doodle Arrow pointing from $2000 down into $2029.56 figure -->
-                <svg class="doodle-arrow-svg" viewBox="0 0 110 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <!-- Smooth blue curved path -->
-                    <path d="M 85 8 C 112 42, 80 92, 32 108" stroke="#2563eb" stroke-width="2.8" stroke-linecap="round" fill="none"/>
-                    <!-- Subtle blue arrowhead -->
-                    <path d="M 44 98 L 30 108 L 42 118" stroke="#2563eb" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <!-- Blue SVG Doodle Arrow pointing precisely down-left into $2029.56 balance text -->
+                <svg class="doodle-arrow-svg" viewBox="0 0 140 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <!-- Arc sweeping from near upper-right down toward top-center left of phone card -->
+                    <path d="M 125 8 C 130 50, 80 82, 38 78" stroke="#2563eb" stroke-width="3" stroke-linecap="round" fill="none"/>
+                    <!-- Crisp arrowhead directly over $2029.56 balance -->
+                    <path d="M 48 68 L 30 78 L 44 88" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
                 </svg>
 
                 <img src="hero.jpg" alt="Workflow AI Automation Masterclass Preview" class="hero-media-image">
@@ -852,37 +898,39 @@
             </a>
         </div>
 
-        <!-- SHORT STORY SECTION -->
+        <!-- SHORT STORY SECTION (ELEVATED CARD FOR DESKTOP) -->
         <section class="content-section-divider">
-            <h2 class="section-heading-title" style="text-align: left;">Short Story.</h2>
+            <h2 class="section-heading-title">Short Story.</h2>
 
-            <p class="story-paragraph-text">
-                I became a victim of a Ponzi scheme and ended up owing people about ₦5 million. It was a really difficult period. There were threats, pressure, and honestly, I felt like I had failed.
-            </p>
+            <div class="story-card-wrapper">
+                <p class="story-paragraph-text">
+                    I became a victim of a Ponzi scheme and ended up owing people about ₦5 million. It was a really difficult period. There were threats, pressure, and honestly, I felt like I had failed.
+                </p>
 
-            <p class="story-paragraph-text">
-                Then I discovered AI automation.
-            </p>
+                <p class="story-paragraph-text">
+                    Then I discovered AI automation.
+                </p>
 
-            <p class="story-paragraph-text">
-                I remember asking, <em>“Will businesses actually pay for this?”</em>
-            </p>
+                <p class="story-paragraph-text">
+                    I remember asking, <em>“Will businesses actually pay for this?”</em>
+                </p>
 
-            <p class="story-paragraph-text">
-                Then I understood something simple: <strong>Businesses want to save time, reduce costs, and make their work easier.</strong>
-            </p>
+                <p class="story-paragraph-text">
+                    Then I understood something simple: <strong>Businesses want to save time, reduce costs, and make their work easier.</strong>
+                </p>
 
-            <p class="story-paragraph-text">
-                So I learned the skill and started pitching. My first pitches failed because I was trying to sell technical tools instead of solving problems.
-            </p>
+                <p class="story-paragraph-text">
+                    So I learned the skill and started pitching. My first pitches failed because I was trying to sell technical tools instead of solving problems.
+                </p>
 
-            <p class="story-paragraph-text">
-                So I changed my approach. I started asking businesses: <strong>“What is taking too much of your time?”</strong> That changed everything.
-            </p>
+                <p class="story-paragraph-text">
+                    So I changed my approach. I started asking businesses: <strong>“What is taking too much of your time?”</strong> That changed everything.
+                </p>
 
-            <p class="story-paragraph-text">
-                Today, I build systems that help businesses simplify their work. I'm not saying it's magic money. I'm saying it's a real skill that solves real problems.
-            </p>
+                <p class="story-paragraph-text" style="margin-bottom: 0;">
+                    Today, I build systems that help businesses simplify their work. I'm not saying it's magic money. I'm saying it's a real skill that solves real problems.
+                </p>
+            </div>
         </section>
 
         <!-- CURRICULUM SECTION -->
@@ -894,7 +942,7 @@
                 <img src="curriculum.jpg" alt="Curriculum Overview" class="curriculum-rounded-image">
             </div>
 
-            <!-- PLAIN CENTRALLY ALIGNED SESSIONS -->
+            <!-- 3-COLUMN RESPONSIVE SESSIONS GRID -->
             <div class="sessions-list-stack">
                 <article class="session-info-card">
                     <h3 class="session-card-header">Session 1: Fundamentals</h3>
@@ -919,7 +967,7 @@
             </div>
         </section>
 
-        <!-- FINAL CTA SECTION WITH COMPACT JOIN.JPG -->
+        <!-- FINAL CTA SECTION -->
         <section class="content-section-divider" id="join">
             <h2 class="section-heading-title">Your Next Move Is Simple</h2>
 
@@ -927,7 +975,7 @@
                 You're getting an introduction to a practical skill, a community to learn with, and a clearer idea of what you can build next.
             </p>
 
-            <!-- REDUCED SIZE JOIN.JPG IMAGE CONTAINER -->
+            <!-- COMPACT JOIN.JPG -->
             <div class="join-image-container">
                 <img src="join.jpg" alt="Join the AI Automation Masterclass" class="join-rounded-image">
             </div>
@@ -948,7 +996,7 @@
             <p class="urgency-footer-caption">Don't wait until everyone else is already learning it.</p>
         </div>
 
-        <!-- FAQ SECTION -->
+        <!-- FAQ SECTION (RESPONSIVE 2-COLUMN GRID) -->
         <section class="faq-section-container">
             <h2 class="faq-header-title">Frequently Asked Questions</h2>
             <p class="faq-subtitle">Everything you need to know before joining the 2-day live training.</p>
