@@ -66,7 +66,7 @@
             background-color: var(--color-bg-primary) !important;
             color: var(--color-text-primary) !important;
             font-family: var(--font-family-base);
-            font-size: 20px; /* Reduced body font size */
+            font-size: 20px;
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -100,7 +100,7 @@
            3. COUNTDOWN TIMER COMPONENT (NON-STICKY)
            ========================================================================== */
         .countdown-top-wrapper {
-            position: relative; /* Normal flow, non-sticky */
+            position: relative;
             width: 100%;
             background-color: var(--color-bg-primary);
             border-bottom: 1px solid var(--color-border-light);
@@ -175,23 +175,23 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 4px;
-            margin: 16px 0 12px 0;
+            gap: 8px;
+            margin: 20px 0 24px 0;
             text-align: center;
         }
 
         .sponsor-label {
-            font-size: 11px;
+            font-size: 12px;
             font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 0.12em;
+            letter-spacing: 0.14em;
             color: var(--color-text-muted);
         }
 
         .sponsor-logo-img {
-            height: 32px;
+            height: 52px;
             width: auto;
-            max-width: 180px;
+            max-width: 240px;
             object-fit: contain;
         }
 
@@ -208,11 +208,8 @@
         }
 
         .entrance-notice-banner {
-            background-color: #eff6ff;
-            border-top: 1px solid #bfdbfe;
-            border-bottom: 1px solid #bfdbfe;
-            border-left: none;
-            border-right: none;
+            background-color: #ffffff;
+            border: none;
             border-radius: 0;
             padding: 10px 14px;
             margin-bottom: 16px;
@@ -243,7 +240,7 @@
             color: var(--color-accent-blue);
         }
 
-        /* Step 2: Main Title (Slightly Reduced) */
+        /* Step 2: Main Title */
         .hero-step-2 {
             font-size: clamp(32px, 8.5vw, 52px);
             line-height: 1.18;
@@ -255,8 +252,9 @@
         /* Image placed directly below Step 2 headline */
         .hero-media-container {
             width: 100%;
-            padding: 0 16px; /* Left & right padding */
-            margin: 16px 0;
+            max-width: 480px;
+            margin: 20px auto;
+            padding: 0 12px;
         }
 
         .hero-media-image {
@@ -264,8 +262,8 @@
             width: 100%;
             height: auto;
             object-fit: cover;
-            border-radius: var(--radius-lg); /* Rounded edge */
-            border: 1px solid var(--color-border-light); /* Frame border */
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--color-border-light);
             box-shadow: var(--shadow-card);
         }
 
@@ -441,8 +439,8 @@
             }
 
             .hero-media-container {
-                max-width: 640px;
-                margin: 20px auto;
+                max-width: 520px;
+                margin: 24px auto;
                 padding: 0 24px;
             }
 
