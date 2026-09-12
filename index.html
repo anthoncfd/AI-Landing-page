@@ -18,7 +18,7 @@
            ========================================================================== */
         :root {
             --color-bg-primary: #f5f5f7;  /* Apple Ceramic White */
-            --color-bg-surface: #ffffff;  /* Pure White for elevated cards */
+            --color-bg-surface: #ffffff;  /* Pure White */
             --color-bg-dark: #000000;
             --color-text-primary: #0f172a;
             --color-text-secondary: #334155;
@@ -194,7 +194,7 @@
         }
 
         /* ==========================================================================
-           4. HERO SECTION & ACCURATE DOODLE ARROW
+           4. HERO SECTION & EXACT SKETCHED DOODLE ARROW
            ========================================================================== */
         .page-content-wrapper {
             width: 100%;
@@ -247,7 +247,7 @@
             letter-spacing: -0.03em;
         }
 
-        /* HERO MEDIA CONTAINER WITH ACCURATELY TARGETED DOODLE ARROW */
+        /* HERO MEDIA CONTAINER WITH DOODLE ARROW */
         .hero-media-container {
             position: relative;
             width: 100%;
@@ -256,15 +256,16 @@
             padding: 0;
         }
 
-        /* EXACT POSITIONING FOR $2029.56 TARGETING */
+        /* EXACT DOODLE ARROW MATCHING THE SKETCH */
         .doodle-arrow-svg {
             position: absolute;
-            top: -48px;
-            right: 8%;
-            width: 120px;
-            height: 110px;
+            top: -32px;
+            left: 0;
+            width: 100%;
+            height: 100%;
             pointer-events: none;
             z-index: 10;
+            overflow: visible;
             filter: drop-shadow(0px 2px 4px rgba(37, 99, 235, 0.25));
         }
 
@@ -336,7 +337,7 @@
         }
 
         /* ==========================================================================
-           6. CONTENT SECTIONS & DESKTOP CARD WRAPPERS
+           6. CONTENT SECTIONS
            ========================================================================== */
         .content-section-divider {
             width: 100%;
@@ -355,7 +356,6 @@
             padding: 0 8px;
         }
 
-        /* ELEVATED CONTAINER FOR SHORT STORY */
         .story-card-wrapper {
             background-color: transparent;
             padding: 0 8px;
@@ -405,11 +405,11 @@
             box-shadow: var(--shadow-card);
         }
 
-        /* SESSIONS LAYOUT */
+        /* SESSIONS LAYOUT (CLEAN UNBOXED STRUCTURE - NO BOX BANNERS) */
         .sessions-list-stack {
             display: flex;
             flex-direction: column;
-            gap: 24px;
+            gap: 28px;
             width: 100%;
             text-align: center;
             padding: 0 8px;
@@ -418,16 +418,16 @@
         }
 
         .session-info-card {
-            background-color: var(--color-bg-surface);
-            padding: 24px 20px;
-            border: 1px solid var(--color-border-light);
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-subtle);
+            background: transparent;
+            padding: 12px 8px;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
             text-align: center;
         }
 
         .session-card-header {
-            font-size: clamp(17px, 4.2vw, 20px);
+            font-size: clamp(18px, 4.5vw, 22px);
             font-weight: 800;
             color: var(--color-accent-blue);
             margin-bottom: 8px;
@@ -436,9 +436,9 @@
         }
 
         .session-card-body {
-            font-size: clamp(16px, 4vw, 18px);
+            font-size: clamp(16px, 4vw, 19px);
             color: var(--color-text-secondary);
-            line-height: 1.55;
+            line-height: 1.6;
         }
 
         /* ==========================================================================
@@ -494,31 +494,31 @@
         }
 
         /* ==========================================================================
-           8. FAQ SECTION (DESKTOP GRID ENHANCED)
+           8. FAQ SECTION (CLEAN - NO DARK BANNER CONTAINERS)
            ========================================================================== */
         .faq-section-container {
-            background-color: #000000;
-            border-radius: var(--radius-lg);
-            padding: 36px 20px;
+            background: transparent;
+            border-radius: 0;
+            padding: 32px 8px 0 8px;
             margin-top: 36px;
-            color: #ffffff;
-            border: 1px solid #1a1a1a;
+            color: var(--color-text-primary);
+            border: none;
             max-width: 900px;
             margin-left: auto;
             margin-right: auto;
         }
 
         .faq-header-title {
-            font-size: clamp(22px, 5.5vw, 30px);
+            font-size: clamp(24px, 5.5vw, 32px);
             font-weight: 800;
-            color: #ffffff;
+            color: var(--color-text-primary);
             text-align: center;
             margin-bottom: 8px;
         }
 
         .faq-subtitle {
-            font-size: 15px;
-            color: #a1a1aa;
+            font-size: 16px;
+            color: var(--color-text-muted);
             text-align: center;
             margin-bottom: 28px;
         }
@@ -526,25 +526,22 @@
         .faq-grid-stack {
             display: flex;
             flex-direction: column;
-            gap: 14px;
+            gap: 16px;
         }
 
         .faq-item-card {
-            background-color: #111111;
-            border: 1px solid #222222;
-            border-radius: var(--radius-md);
-            padding: 20px 18px;
-            transition: border-color 0.2s ease;
-        }
-
-        .faq-item-card:hover {
-            border-color: var(--color-accent-blue);
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--color-border-light);
+            border-radius: 0;
+            padding: 20px 0;
+            transition: none;
         }
 
         .faq-question-text {
-            font-size: 17px;
+            font-size: 18px;
             font-weight: 700;
-            color: #ffffff;
+            color: var(--color-text-primary);
             margin-bottom: 8px;
             display: flex;
             align-items: center;
@@ -561,9 +558,9 @@
         }
 
         .faq-answer-text {
-            font-size: 15px;
-            color: #d4d4d8;
-            line-height: 1.55;
+            font-size: 16px;
+            color: var(--color-text-secondary);
+            line-height: 1.6;
         }
 
         /* ==========================================================================
@@ -749,15 +746,6 @@
                 font-size: 15px;
             }
 
-            /* REFINED ACCURATE ARROW ADJUSTMENT FOR DESKTOP */
-            .doodle-arrow-svg {
-                top: -52px;
-                right: 10%;
-                width: 135px;
-                height: 120px;
-            }
-
-            /* STORY CARD ELEVATED CONTAINER */
             .story-card-wrapper {
                 background-color: var(--color-bg-surface);
                 border: 1px solid var(--color-border-light);
@@ -766,25 +754,16 @@
                 box-shadow: var(--shadow-card);
             }
 
-            /* SESSIONS 3-COLUMN GRID */
             .sessions-list-stack {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
-                gap: 16px;
+                gap: 24px;
             }
 
-            .session-info-card {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                height: 100%;
-            }
-
-            /* FAQ 2-COLUMN GRID */
             .faq-grid-stack {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                gap: 16px;
+                gap: 24px;
             }
 
             .footer-banner-row {
@@ -868,14 +847,14 @@
                 I Used This Skill to Clear My Debts and Still Had $2,000 Left.
             </h1>
 
-            <!-- HERO MEDIA CONTAINER WITH ACCURATELY TARGETED BLUE DOODLE ARROW -->
+            <!-- HERO MEDIA CONTAINER WITH SKETCHED DOODLE ARROW -->
             <div class="hero-media-container" id="heroImageBlock">
-                <!-- Blue SVG Doodle Arrow pointing precisely down-left into $2029.56 balance text -->
-                <svg class="doodle-arrow-svg" viewBox="0 0 140 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <!-- Arc sweeping from near upper-right down toward top-center left of phone card -->
-                    <path d="M 125 8 C 130 50, 80 82, 38 78" stroke="#2563eb" stroke-width="3" stroke-linecap="round" fill="none"/>
-                    <!-- Crisp arrowhead directly over $2029.56 balance -->
-                    <path d="M 48 68 L 30 78 L 44 88" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <!-- Blue SVG Doodle Arrow swooping from $2,000 headline down onto $2029.56 balance -->
+                <svg class="doodle-arrow-svg" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <!-- Smooth S-curve arc matching user sketch -->
+                    <path d="M 210 -10 C 238 35, 222 80, 198 112" stroke="#2563eb" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+                    <!-- Hand-drawn arrowhead pointing down into $2029.56 -->
+                    <path d="M 188 100 L 198 112 L 208 102" stroke="#2563eb" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
                 </svg>
 
                 <img src="hero.jpg" alt="Workflow AI Automation Masterclass Preview" class="hero-media-image">
@@ -898,7 +877,7 @@
             </a>
         </div>
 
-        <!-- SHORT STORY SECTION (ELEVATED CARD FOR DESKTOP) -->
+        <!-- SHORT STORY SECTION -->
         <section class="content-section-divider">
             <h2 class="section-heading-title">Short Story.</h2>
 
@@ -942,7 +921,7 @@
                 <img src="curriculum.jpg" alt="Curriculum Overview" class="curriculum-rounded-image">
             </div>
 
-            <!-- 3-COLUMN RESPONSIVE SESSIONS GRID -->
+            <!-- SESSIONS (UNBOXED - NO CARD BANNERS) -->
             <div class="sessions-list-stack">
                 <article class="session-info-card">
                     <h3 class="session-card-header">Session 1: Fundamentals</h3>
@@ -996,7 +975,7 @@
             <p class="urgency-footer-caption">Don't wait until everyone else is already learning it.</p>
         </div>
 
-        <!-- FAQ SECTION (RESPONSIVE 2-COLUMN GRID) -->
+        <!-- FAQ SECTION (CLEAN - NO DARK CONTAINER BANNERS) -->
         <section class="faq-section-container">
             <h2 class="faq-header-title">Frequently Asked Questions</h2>
             <p class="faq-subtitle">Everything you need to know before joining the 2-day live training.</p>
