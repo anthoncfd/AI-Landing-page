@@ -193,7 +193,7 @@
         }
 
         /* ==========================================================================
-           4. HERO SECTION & DOODLE ANNOTATION
+           4. HERO SECTION & SUBTLE BLUE DOODLE ANNOTATION
            ========================================================================== */
         .page-content-wrapper {
             width: 100%;
@@ -208,17 +208,19 @@
             background: transparent;
             border: none;
             border-radius: 0;
-            padding: 4px 0;
-            margin-bottom: 16px;
+            padding: 2px 0 10px 0;
+            margin-bottom: 12px;
             text-align: center;
             box-shadow: none;
         }
 
+        /* REDUCED FONT SIZE FOR NOTICE BANNER */
         .entrance-notice-banner p {
-            font-size: 17px;
-            font-weight: 600;
-            color: var(--color-text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--color-text-muted);
             line-height: 1.4;
+            letter-spacing: -0.01em;
         }
 
         .hero-text-stack {
@@ -248,20 +250,21 @@
         .hero-media-container {
             position: relative;
             width: 100%;
-            max-width: 480px;
-            margin: 35px auto 20px auto;
+            max-width: 460px;
+            margin: 32px auto 20px auto;
             padding: 0 12px;
         }
 
+        /* SUBTLE BLUE DOODLE ARROW (CROSS-DEVICE SAFE) */
         .doodle-arrow-svg {
             position: absolute;
-            top: -52px;
+            top: -46px;
             right: 18%;
             width: 85px;
-            height: 95px;
+            height: 105px;
             pointer-events: none;
             z-index: 10;
-            filter: drop-shadow(0px 2px 4px rgba(239, 68, 68, 0.25));
+            filter: drop-shadow(0px 1px 3px rgba(37, 99, 235, 0.2));
         }
 
         .hero-media-image {
@@ -327,7 +330,7 @@
         }
 
         /* ==========================================================================
-           6. CONTENT SECTIONS
+           6. CONTENT SECTIONS & COMPACT JOIN.JPG CONTAINER
            ========================================================================== */
         .content-section-divider {
             width: 100%;
@@ -368,6 +371,24 @@
             height: auto;
             object-fit: cover;
             border-radius: var(--radius-lg);
+            border: 1px solid var(--color-border-light);
+            box-shadow: var(--shadow-card);
+        }
+
+        /* REDUCED SIZE SPECIFICALLY FOR JOIN.JPG */
+        .join-image-container {
+            width: 100%;
+            max-width: 300px;
+            margin: 16px auto 20px auto;
+            padding: 0 8px;
+        }
+
+        .join-rounded-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: var(--radius-md);
             border: 1px solid var(--color-border-light);
             box-shadow: var(--shadow-card);
         }
@@ -651,7 +672,7 @@
         }
 
         /* ==========================================================================
-           10. STICKY PREMIUM WHATSAPP FLOATING BUTTON (COMPACT & SLEEK)
+           10. STICKY PREMIUM WHATSAPP FLOATING BUTTON
            ========================================================================== */
         .whatsapp-sticky-float {
             position: fixed;
@@ -659,7 +680,7 @@
             right: 20px;
             width: 48px;
             height: 48px;
-            background-color: #00a884; /* Premium WhatsApp Emerald Green */
+            background-color: #00a884;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -709,9 +730,9 @@
             }
 
             .doodle-arrow-svg {
-                top: -68px;
-                right: 22%;
-                width: 110px;
+                top: -54px;
+                right: 20%;
+                width: 105px;
                 height: 125px;
             }
 
@@ -786,7 +807,7 @@
     <!-- MAIN PAGE CONTENT -->
     <main class="page-content-wrapper">
 
-        <!-- ENTRANCE BANNER (PLAIN TEXT, NO BORDER) -->
+        <!-- ENTRANCE BANNER (SUBTLE, LITTLE FONT SIZE) -->
         <div class="entrance-notice-banner">
             <p>Listen: You must have a good working phone (From 4GB RAM up) or a Laptop to build.</p>
         </div>
@@ -801,12 +822,14 @@
                 I Used This Skill to Clear My Debts and Still Had $2,000 Left.
             </h1>
 
-            <!-- HERO MEDIA CONTAINER WITH HAND-DRAWN DOODLE ARROW -->
+            <!-- HERO MEDIA CONTAINER WITH SUBTLE BLUE DOODLE ARROW -->
             <div class="hero-media-container" id="heroImageBlock">
-                <!-- SVG Doodle Arrow -->
-                <svg class="doodle-arrow-svg" viewBox="0 0 100 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M 68 8 C 102 32, 86 82, 28 96" stroke="#ef4444" stroke-width="4.5" stroke-linecap="round" fill="none"/>
-                    <path d="M 22 84 L 26 97 L 40 92" stroke="#ef4444" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <!-- Subtle Blue SVG Doodle Arrow pointing from $2000 down into $2029.56 figure -->
+                <svg class="doodle-arrow-svg" viewBox="0 0 110 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <!-- Smooth blue curved path -->
+                    <path d="M 85 8 C 112 42, 80 92, 32 108" stroke="#2563eb" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+                    <!-- Subtle blue arrowhead -->
+                    <path d="M 44 98 L 30 108 L 42 118" stroke="#2563eb" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
                 </svg>
 
                 <img src="hero.jpg" alt="Workflow AI Automation Masterclass Preview" class="hero-media-image">
@@ -829,7 +852,7 @@
             </a>
         </div>
 
-        <!-- SHORT STORY SECTION (LEFT ALIGNED TITLE) -->
+        <!-- SHORT STORY SECTION -->
         <section class="content-section-divider">
             <h2 class="section-heading-title" style="text-align: left;">Short Story.</h2>
 
@@ -896,7 +919,7 @@
             </div>
         </section>
 
-        <!-- FINAL CTA SECTION WITH IMAGE BEFORE BUTTON -->
+        <!-- FINAL CTA SECTION WITH COMPACT JOIN.JPG -->
         <section class="content-section-divider" id="join">
             <h2 class="section-heading-title">Your Next Move Is Simple</h2>
 
@@ -904,9 +927,9 @@
                 You're getting an introduction to a practical skill, a community to learn with, and a clearer idea of what you can build next.
             </p>
 
-            <!-- IMAGE ADDED JUST BEFORE "JOIN THE 2-DAY MASTERCLASS" -->
-            <div class="curriculum-image-container">
-                <img src="join.jpg" alt="Join the AI Automation Masterclass" class="curriculum-rounded-image">
+            <!-- REDUCED SIZE JOIN.JPG IMAGE CONTAINER -->
+            <div class="join-image-container">
+                <img src="join.jpg" alt="Join the AI Automation Masterclass" class="join-rounded-image">
             </div>
 
             <div class="cta-button-wrapper" style="margin-bottom: 0;">
@@ -998,7 +1021,7 @@
         </div>
     </footer>
 
-    <!-- STICKY FLOATING ACCURATE WHATSAPP BUTTON -->
+    <!-- STICKY FLOATING WHATSAPP BUTTON -->
     <a href="https://wa.me/2348061780610?text=I%27m%20interested%20in%20joining%20the%20AI%20automation%20Class." 
        class="whatsapp-sticky-float" 
        target="_blank" 
