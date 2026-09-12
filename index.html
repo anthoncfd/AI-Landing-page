@@ -96,16 +96,16 @@
         }
 
         /* ==========================================================================
-           3. TOP HEADER BAR: LOGO (LEFT) + COUNTDOWN / LIMITED OFFER (RIGHT)
+           3. TOP HEADER BAR WITH SUBTLE DIVIDER LINE
            ========================================================================== */
         .header-top-bar-wrapper {
             position: relative;
             width: 100%;
             background-color: var(--color-bg-primary);
-            border: none; /* Lines removed */
-            padding: 10px 0;
-            margin-top: 10px;
-            margin-bottom: 16px;
+            border-bottom: 1px solid var(--color-border-light); /* Subtle divider line */
+            padding: 12px 0 16px 0;
+            margin-top: 4px;
+            margin-bottom: 20px;
         }
 
         .header-top-bar-container {
@@ -118,7 +118,7 @@
             margin: 0 auto;
         }
 
-        /* Left Side: Logo (Bigger) */
+        /* Left Side: Logo (Reduced Size) */
         .header-logo-block {
             display: flex;
             align-items: center;
@@ -126,9 +126,9 @@
         }
 
         .header-logo-img {
-            height: 56px; /* Increased logo size */
+            height: 36px; /* Reduced logo size */
             width: auto;
-            max-width: 200px;
+            max-width: 160px;
             object-fit: contain;
         }
 
@@ -199,9 +199,9 @@
            ========================================================================== */
         .page-content-wrapper {
             width: 100%;
-            max-width: 100%;
-            margin: 0;
-            padding: 0 0 40px 0;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 0 20px 0;
             display: flex;
             flex-direction: column;
         }
@@ -355,6 +355,7 @@
             padding: 16px 12px;
             border-top: 1px solid var(--color-border-subtle);
             border-bottom: 1px solid var(--color-border-subtle);
+            border-radius: var(--radius-md);
         }
 
         .session-card-header {
@@ -373,13 +374,84 @@
         }
 
         /* ==========================================================================
-           7. URGENCY FOOTER BLOCK
+           7. FAQ SECTION (Inspired by Image 1 - Dark modern aesthetic)
+           ========================================================================== */
+        .faq-section-container {
+            background-color: #0b1120;
+            border-radius: var(--radius-lg);
+            padding: 32px 16px;
+            margin-top: 36px;
+            color: #ffffff;
+            border: 1px solid #1e293b;
+        }
+
+        .faq-header-title {
+            font-size: clamp(24px, 6vw, 32px);
+            font-weight: 800;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .faq-subtitle {
+            font-size: 16px;
+            color: #94a3b8;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .faq-grid-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .faq-item-card {
+            background-color: #162032;
+            border: 1px solid #24334a;
+            border-radius: var(--radius-md);
+            padding: 18px 16px;
+            transition: border-color 0.2s ease;
+        }
+
+        .faq-item-card:hover {
+            border-color: var(--color-accent-blue);
+        }
+
+        .faq-question-text {
+            font-size: 18px;
+            font-weight: 700;
+            color: #f8fafc;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+        }
+
+        .faq-question-text::after {
+            content: "→";
+            color: var(--color-accent-blue);
+            font-weight: 800;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .faq-answer-text {
+            font-size: 16px;
+            color: #94a3b8;
+            line-height: 1.55;
+        }
+
+        /* ==========================================================================
+           8. URGENCY CARD
            ========================================================================== */
         .urgency-footer-card {
             background-color: var(--color-bg-dark);
             color: var(--color-text-inverse);
             padding: 24px 16px;
             margin-top: 32px;
+            border-radius: var(--radius-lg);
             width: 100%;
             text-align: center;
         }
@@ -415,7 +487,116 @@
         }
 
         /* ==========================================================================
-           8. DESKTOP / TABLET BREAKPOINT ENHANCEMENTS
+           9. BRAND FOOTER (Inspired by Image 2 - High Contrast & Pill Action)
+           ========================================================================== */
+        .site-footer-bar {
+            background-color: #000000;
+            color: #ffffff;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            margin-top: 48px;
+            padding: 44px 16px 28px 16px;
+            border-top: 1px solid #1a1a1a;
+        }
+
+        .footer-content-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .footer-banner-row {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .footer-headline-text {
+            font-size: clamp(24px, 6vw, 36px);
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+        }
+
+        .footer-headline-text u {
+            text-decoration: underline;
+            text-underline-offset: 6px;
+            text-decoration-color: #3b82f6;
+        }
+
+        .footer-action-pills {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn-pill-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #2563eb;
+            color: #ffffff !important;
+            font-weight: 700;
+            font-size: 16px;
+            padding: 12px 28px;
+            border-radius: var(--radius-pill);
+            text-decoration: none;
+            transition: background-color 0.15s ease, transform 0.15s ease;
+        }
+
+        .btn-pill-primary:active {
+            transform: scale(0.97);
+            background-color: #1d4ed8;
+        }
+
+        .btn-pill-outline {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            color: #ffffff !important;
+            border: 1.5px solid #ffffff;
+            font-weight: 700;
+            font-size: 16px;
+            padding: 11px 26px;
+            border-radius: var(--radius-pill);
+            text-decoration: none;
+            transition: background-color 0.15s ease, color 0.15s ease;
+        }
+
+        .btn-pill-outline:active {
+            background-color: #ffffff;
+            color: #000000 !important;
+        }
+
+        .footer-bottom-divider {
+            border-top: 1px solid #1a1a1a;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            text-align: center;
+        }
+
+        .footer-copy-text {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        /* ==========================================================================
+           10. DESKTOP / TABLET BREAKPOINT ENHANCEMENTS
            ========================================================================== */
         @media (min-width: 640px) {
             body {
@@ -423,8 +604,8 @@
             }
 
             .header-logo-img {
-                height: 68px;
-                max-width: 250px;
+                height: 40px;
+                max-width: 180px;
             }
 
             .flip-clock-grid {
@@ -444,6 +625,15 @@
                 max-width: 480px;
                 font-size: 24px;
             }
+
+            .footer-banner-row {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .footer-bottom-divider {
+                flex-direction: row;
+            }
         }
     </style>
 </head>
@@ -452,7 +642,7 @@
     <!-- TOP HEADER BAR: LOGO (LEFT) & LIMITED OFFER + COUNTDOWN (RIGHT) -->
     <header class="header-top-bar-wrapper">
         <div class="header-top-bar-container">
-            <!-- Left: Logo -->
+            <!-- Left: Logo (Reduced Size) -->
             <div class="header-logo-block">
                 <img src="logo1.png" alt="ThonLabs Logo" class="header-logo-img">
             </div>
@@ -599,6 +789,42 @@
             </div>
         </section>
 
+        <!-- FAQ SECTION (Inspired by Image 1 - Card/Solution structure adapted to FAQs) -->
+        <section class="faq-section-container">
+            <h2 class="faq-header-title">Frequently Asked Questions</h2>
+            <p class="faq-subtitle">Everything you need to know before joining the 2-day live training.</p>
+
+            <div class="faq-grid-stack">
+                <article class="faq-item-card">
+                    <h3 class="faq-question-text">Do I need coding experience to join?</h3>
+                    <p class="faq-answer-text">
+                        No prior coding skills are required. We focus on modern no-code and low-code workflow automation tools (like n8n) that allow you to connect systems visually and logically.
+                    </p>
+                </article>
+
+                <article class="faq-item-card">
+                    <h3 class="faq-question-text">What hardware/device do I need?</h3>
+                    <p class="faq-answer-text">
+                        All you need is a smartphone with at least 4GB RAM or a laptop with a working browser and a steady internet connection.
+                    </p>
+                </article>
+
+                <article class="faq-item-card">
+                    <h3 class="faq-question-text">Are the sessions live or recorded?</h3>
+                    <p class="faq-answer-text">
+                        The masterclass is hosted live so you can build along, ask questions, and get real-time feedback. Session recordings will also be made available to registered participants.
+                    </p>
+                </article>
+
+                <article class="faq-item-card">
+                    <h3 class="faq-question-text">How do I turn this skill into income?</h3>
+                    <p class="faq-answer-text">
+                        Businesses suffer from manual data entry, slow customer responses, and tedious administration. You'll learn how to identify these exact pain points and offer automation solutions as a high-value service.
+                    </p>
+                </article>
+            </div>
+        </section>
+
         <!-- FINAL CTA SECTION -->
         <section class="content-section-divider" id="join">
             <h2 class="section-heading-title">Your Next Move Is Simple</h2>
@@ -616,15 +842,43 @@
             </div>
         </section>
 
-        <!-- URGENCY FOOTER CARD -->
-        <footer class="urgency-footer-card">
+        <!-- URGENCY CARD -->
+        <div class="urgency-footer-card">
             <div class="urgency-badge-label">Note This ❗️</div>
             <p class="urgency-subtext-copy">If the response becomes too large, registration may close or the offer may change.</p>
             <h3 class="urgency-headline-bold">DON'T SAY LATER. DO IT NOW AND TAKE CHARGE OF YOUR LIFE.</h3>
             <p class="urgency-footer-caption">Don't wait until everyone else is already learning it.</p>
-        </footer>
+        </div>
 
     </main>
+
+    <!-- BRAND FOOTER (Inspired by Image 2 - Dark contrast aesthetic) -->
+    <footer class="site-footer-bar">
+        <div class="footer-content-inner">
+            <div class="footer-banner-row">
+                <h2 class="footer-headline-text">
+                    Explore <u>workflow automation</u> masterclass.
+                </h2>
+                <div class="footer-action-pills">
+                    <a href="https://wa.me/2348061780610?text=To%20join%20the%20aai%20Automation%20Class" target="_blank" rel="noopener noreferrer" class="btn-pill-primary">
+                        Join Now
+                    </a>
+                    <a href="#join" class="btn-pill-outline">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom-divider">
+                <p class="footer-copy-text">
+                    &copy; ThonLabs Automation. All rights reserved.
+                </p>
+                <p class="footer-copy-text">
+                    Designed for builders, creators, and business strategists.
+                </p>
+            </div>
+        </div>
+    </footer>
 
     <!-- COUNTDOWN SCRIPT -->
     <script>
