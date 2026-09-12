@@ -32,7 +32,6 @@
 
             --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             
-            --layout-max-width: 100%;
             --radius-sm: 6px;
             --radius-md: 12px;
             --radius-lg: 16px;
@@ -97,40 +96,68 @@
         }
 
         /* ==========================================================================
-           3. COUNTDOWN TIMER COMPONENT (NON-STICKY)
+           3. TOP HEADER BAR: LOGO (LEFT) + COUNTDOWN / LIMITED OFFER (RIGHT)
            ========================================================================== */
-        .countdown-top-wrapper {
+        .header-top-bar-wrapper {
             position: relative;
             width: 100%;
             background-color: var(--color-bg-primary);
-            border-bottom: 1px solid var(--color-border-light);
-            padding: 8px 0;
+            border-bottom: 2px solid var(--color-text-primary);
+            border-top: 2px solid var(--color-text-primary);
+            padding: 10px 8px;
+            margin-top: 10px;
+            margin-bottom: 16px;
         }
 
-        .countdown-container {
+        .header-top-bar-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
             width: 100%;
-            max-width: 100%;
-            margin: 0;
-            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Left Side: Logo */
+        .header-logo-block {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .header-logo-img {
+            height: 40px;
+            width: auto;
+            max-width: 150px;
+            object-fit: contain;
+        }
+
+        /* Right Side: Limited Offer + Countdown */
+        .header-countdown-block {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: right;
+            flex-grow: 1;
         }
 
         .countdown-header-title {
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 800;
             letter-spacing: 0.8px;
             text-transform: uppercase;
-            color: var(--color-text-muted);
+            color: var(--color-text-primary);
             margin-bottom: 4px;
+            white-space: nowrap;
         }
 
         .flip-clock-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 6px;
+            gap: 4px;
             width: 100%;
-            max-width: 300px;
-            margin: 0 auto;
-            padding: 0 6px;
+            max-width: 220px;
         }
 
         .flip-unit-box {
@@ -143,7 +170,7 @@
             position: relative;
             background-color: var(--color-bg-surface);
             width: 100%;
-            height: 30px;
+            height: 28px;
             border-radius: var(--radius-sm);
             display: flex;
             align-items: center;
@@ -152,57 +179,29 @@
         }
 
         .flip-digit-display {
-            font-size: 15px;
+            font-size: 13px;
             font-weight: 800;
             color: var(--color-text-primary);
             font-variant-numeric: tabular-nums;
         }
 
         .unit-label-text {
-            font-size: 10px;
+            font-size: 9px;
             font-weight: 700;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.3px;
             text-transform: uppercase;
             color: var(--color-text-muted);
             margin-top: 2px;
         }
 
         /* ==========================================================================
-           4. BRAND SPONSOR BADGE
-           ========================================================================== */
-        .sponsor-badge-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            margin: 20px 0 24px 0;
-            text-align: center;
-        }
-
-        .sponsor-label {
-            font-size: 12px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.14em;
-            color: var(--color-text-muted);
-        }
-
-        .sponsor-logo-img {
-            height: 52px;
-            width: auto;
-            max-width: 240px;
-            object-fit: contain;
-        }
-
-        /* ==========================================================================
-           5. HERO SECTION WITH 4 TYPOGRAPHIC STEPS + EMBEDDED IMAGE
+           4. HERO SECTION
            ========================================================================== */
         .page-content-wrapper {
             width: 100%;
             max-width: 100%;
             margin: 0;
-            padding: 12px 0 40px 0;
+            padding: 0 0 40px 0;
             display: flex;
             flex-direction: column;
         }
@@ -210,14 +209,13 @@
         .entrance-notice-banner {
             background-color: #ffffff;
             border: none;
-            border-radius: 0;
-            padding: 10px 14px;
+            padding: 8px 12px;
             margin-bottom: 16px;
             text-align: center;
         }
 
         .entrance-notice-banner p {
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 600;
             color: #1e40af;
             line-height: 1.4;
@@ -231,7 +229,6 @@
             padding: 0 8px;
         }
 
-        /* Step 1: Kicker / Tagline */
         .hero-step-1 {
             font-size: clamp(15px, 4vw, 20px);
             font-weight: 800;
@@ -240,7 +237,6 @@
             color: var(--color-accent-blue);
         }
 
-        /* Step 2: Main Title */
         .hero-step-2 {
             font-size: clamp(32px, 8.5vw, 52px);
             line-height: 1.18;
@@ -249,7 +245,6 @@
             letter-spacing: -0.03em;
         }
 
-        /* Image placed directly below Step 2 headline */
         .hero-media-container {
             width: 100%;
             max-width: 480px;
@@ -267,7 +262,6 @@
             box-shadow: var(--shadow-card);
         }
 
-        /* Step 3: Core Sub-headline */
         .hero-step-3 {
             font-size: clamp(20px, 5vw, 26px);
             line-height: 1.45;
@@ -275,7 +269,6 @@
             color: var(--color-text-primary);
         }
 
-        /* Step 4: Practical Action Statement */
         .hero-step-4 {
             font-size: clamp(17px, 4.2vw, 22px);
             line-height: 1.5;
@@ -283,7 +276,7 @@
         }
 
         /* ==========================================================================
-           6. CALL TO ACTION BUTTONS
+           5. CALL TO ACTION BUTTONS
            ========================================================================== */
         .cta-button-wrapper {
             display: flex;
@@ -322,7 +315,7 @@
         }
 
         /* ==========================================================================
-           7. STORY & CURRICULUM SECTIONS
+           6. CONTENT SECTIONS
            ========================================================================== */
         .content-section-divider {
             width: 100%;
@@ -359,13 +352,9 @@
 
         .session-info-card {
             background-color: var(--color-bg-surface);
-            border-radius: 0;
             padding: 16px 12px;
             border-top: 1px solid var(--color-border-subtle);
             border-bottom: 1px solid var(--color-border-subtle);
-            border-left: none;
-            border-right: none;
-            box-shadow: none;
         }
 
         .session-card-header {
@@ -384,13 +373,12 @@
         }
 
         /* ==========================================================================
-           8. URGENCY FOOTER BLOCK
+           7. URGENCY FOOTER BLOCK
            ========================================================================== */
         .urgency-footer-card {
             background-color: var(--color-bg-dark);
             color: var(--color-text-inverse);
             padding: 24px 16px;
-            border-radius: 0;
             margin-top: 32px;
             width: 100%;
             text-align: center;
@@ -427,97 +415,91 @@
         }
 
         /* ==========================================================================
-           9. DESKTOP / TABLET BREAKPOINT ENHANCEMENTS
+           8. DESKTOP / TABLET BREAKPOINT ENHANCEMENTS
            ========================================================================== */
         @media (min-width: 640px) {
             body {
                 padding: 0 24px;
             }
 
-            .page-content-wrapper {
-                padding: 24px 0 56px 0;
+            .header-logo-img {
+                height: 48px;
+                max-width: 200px;
             }
 
-            .hero-media-container {
-                max-width: 520px;
-                margin: 24px auto;
-                padding: 0 24px;
+            .flip-clock-grid {
+                max-width: 280px;
+                gap: 6px;
             }
 
             .flip-card-face {
-                height: 34px;
+                height: 32px;
             }
 
             .flip-digit-display {
-                font-size: 18px;
+                font-size: 16px;
             }
 
             .btn-call-to-action {
                 max-width: 480px;
                 font-size: 24px;
             }
-
-            .session-info-card {
-                padding: 20px 20px;
-            }
-
-            .urgency-footer-card {
-                padding: 32px 24px;
-            }
         }
     </style>
 </head>
 <body>
 
-    <!-- NON-STICKY COUNTDOWN HEADER -->
-    <header class="countdown-top-wrapper">
-        <div class="countdown-container">
-            <div class="countdown-header-title">LIMITED SPECIAL OFFER</div>
-            
-            <div class="flip-clock-grid" aria-label="Countdown timer">
-                <div class="flip-unit-box">
-                    <div class="flip-card-face">
-                        <span class="flip-digit-display" id="days">--</span>
-                    </div>
-                    <span class="unit-label-text">Days</span>
-                </div>
+    <!-- TOP HEADER BAR: LOGO (LEFT) & LIMITED OFFER + COUNTDOWN (RIGHT) -->
+    <header class="header-top-bar-wrapper">
+        <div class="header-top-bar-container">
+            <!-- Left: Logo -->
+            <div class="header-logo-block">
+                <img src="logo1.png" alt="ThonLabs Logo" class="header-logo-img">
+            </div>
 
-                <div class="flip-unit-box">
-                    <div class="flip-card-face">
-                        <span class="flip-digit-display" id="hours">--</span>
+            <!-- Right: Countdown & Limited Offer -->
+            <div class="header-countdown-block">
+                <div class="countdown-header-title">LIMITED OFFER</div>
+                
+                <div class="flip-clock-grid" aria-label="Countdown timer">
+                    <div class="flip-unit-box">
+                        <div class="flip-card-face">
+                            <span class="flip-digit-display" id="days">--</span>
+                        </div>
+                        <span class="unit-label-text">Days</span>
                     </div>
-                    <span class="unit-label-text">Hours</span>
-                </div>
 
-                <div class="flip-unit-box">
-                    <div class="flip-card-face">
-                        <span class="flip-digit-display" id="minutes">--</span>
+                    <div class="flip-unit-box">
+                        <div class="flip-card-face">
+                            <span class="flip-digit-display" id="hours">--</span>
+                        </div>
+                        <span class="unit-label-text">Hours</span>
                     </div>
-                    <span class="unit-label-text">Minutes</span>
-                </div>
 
-                <div class="flip-unit-box">
-                    <div class="flip-card-face">
-                        <span class="flip-digit-display" id="seconds">--</span>
+                    <div class="flip-unit-box">
+                        <div class="flip-card-face">
+                            <span class="flip-digit-display" id="minutes">--</span>
+                        </div>
+                        <span class="unit-label-text">Min</span>
                     </div>
-                    <span class="unit-label-text">Seconds</span>
+
+                    <div class="flip-unit-box">
+                        <div class="flip-card-face">
+                            <span class="flip-digit-display" id="seconds">--</span>
+                        </div>
+                        <span class="unit-label-text">Sec</span>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- MAIN PAGE CONTAINER -->
+    <!-- MAIN PAGE CONTENT -->
     <main class="page-content-wrapper">
 
         <!-- ENTRANCE BANNER -->
         <div class="entrance-notice-banner">
             <p>Listen: You must have a good working phone (From 4GB RAM up) or a Laptop to build.</p>
-        </div>
-
-        <!-- SPONSOR LOGO BADGE -->
-        <div class="sponsor-badge-wrapper">
-            <span class="sponsor-label">Sponsored by:</span>
-            <img src="logo1.png" alt="ThonLabs Logo" class="sponsor-logo-img">
         </div>
 
         <!-- HERO TEXT SECTION IN 4 STEPS WITH EMBEDDED IMAGE -->
@@ -644,31 +626,25 @@
 
     </main>
 
-    <!-- COUNTDOWN ENGINE -->
+    <!-- COUNTDOWN SCRIPT -->
     <script>
     (function () {
         'use strict';
 
-        var FIXED_DEADLINE_ISO = null; 
         var EVERGREEN_DURATION_MS = ((4 * 24 * 3600) + (23 * 3600) + (58 * 60) + 54) * 1000;
-
         var deadline;
 
-        if (FIXED_DEADLINE_ISO) {
-            deadline = new Date(FIXED_DEADLINE_ISO).getTime();
-        } else {
-            try {
-                deadline = Number(localStorage.getItem('masterclassOfferDeadline'));
-            } catch (e) {
-                deadline = NaN;
-            }
+        try {
+            deadline = Number(localStorage.getItem('masterclassOfferDeadline'));
+        } catch (e) {
+            deadline = NaN;
+        }
 
-            if (!deadline || isNaN(deadline) || deadline <= Date.now() || (deadline - Date.now() > EVERGREEN_DURATION_MS)) {
-                deadline = Date.now() + EVERGREEN_DURATION_MS;
-                try {
-                    localStorage.setItem('masterclassOfferDeadline', String(deadline));
-                } catch (e) {}
-            }
+        if (!deadline || isNaN(deadline) || deadline <= Date.now() || (deadline - Date.now() > EVERGREEN_DURATION_MS)) {
+            deadline = Date.now() + EVERGREEN_DURATION_MS;
+            try {
+                localStorage.setItem('masterclassOfferDeadline', String(deadline));
+            } catch (e) {}
         }
 
         var els = {
