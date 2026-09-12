@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="color-scheme" content="light">
     <meta name="theme-color" content="#f5f5f7">
-    <title>2-Day Automation Masterclass</title>
+    <title>2-Day AI Automation Masterclass</title>
 
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -358,11 +358,11 @@
             padding: 0 8px;
         }
 
-        /* Curriculum Image Styling */
+        /* Curriculum & General Section Image Styling */
         .curriculum-image-container {
             width: 100%;
             max-width: 520px;
-            margin: 8px auto 28px auto;
+            margin: 16px auto 24px auto;
             padding: 0 8px;
         }
 
@@ -426,7 +426,6 @@
             text-align: center;
         }
 
-        /* Blue Badge in Note This ❗️ */
         .urgency-badge-label {
             background-color: var(--color-accent-blue);
             color: #ffffff;
@@ -462,7 +461,7 @@
         }
 
         /* ==========================================================================
-           8. FAQ SECTION (Matched exactly to footer background #000000)
+           8. FAQ SECTION
            ========================================================================== */
         .faq-section-container {
             background-color: #000000;
@@ -532,7 +531,7 @@
         }
 
         /* ==========================================================================
-           9. BRAND FOOTER (WITH LOGO SUPPORT)
+           9. BRAND FOOTER
            ========================================================================== */
         .site-footer-bar {
             background-color: #000000;
@@ -583,12 +582,6 @@
             color: #ffffff;
             line-height: 1.25;
             letter-spacing: -0.02em;
-        }
-
-        .footer-headline-text u {
-            text-decoration: underline;
-            text-underline-offset: 6px;
-            text-decoration-color: #3b82f6;
         }
 
         .footer-action-pills {
@@ -663,7 +656,38 @@
         }
 
         /* ==========================================================================
-           10. DESKTOP / TABLET / IPAD BREAKPOINT ENHANCEMENTS
+           10. STICKY WHATSAPP FLOATING BUTTON
+           ========================================================================== */
+        .whatsapp-sticky-float {
+            position: fixed;
+            bottom: 24px;
+            right: 20px;
+            width: 58px;
+            height: 58px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 18px rgba(37, 211, 102, 0.45), 0 2px 8px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-decoration: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .whatsapp-sticky-float:hover, .whatsapp-sticky-float:active {
+            transform: scale(1.08);
+            box-shadow: 0 6px 22px rgba(37, 211, 102, 0.6), 0 4px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        .whatsapp-icon-svg {
+            width: 34px;
+            height: 34px;
+        }
+
+        /* ==========================================================================
+           11. RESPONSIVE BREAKPOINTS
            ========================================================================== */
         @media (min-width: 640px) {
             body {
@@ -707,6 +731,11 @@
 
             .footer-bottom-divider {
                 flex-direction: row;
+            }
+
+            .whatsapp-sticky-float {
+                bottom: 28px;
+                right: 28px;
             }
         }
     </style>
@@ -769,7 +798,7 @@
         <!-- HERO TEXT SECTION -->
         <div class="hero-text-stack">
             <div class="hero-step-1">
-                2-Day Live Automation Masterclass
+                2-Day Live AI Automation Masterclass
             </div>
 
             <h1 class="hero-step-2">
@@ -780,17 +809,15 @@
             <div class="hero-media-container" id="heroImageBlock">
                 <!-- SVG Doodle Arrow -->
                 <svg class="doodle-arrow-svg" viewBox="0 0 100 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <!-- Curved Red Doodle Arrow Body -->
                     <path d="M 68 8 C 102 32, 86 82, 28 96" stroke="#ef4444" stroke-width="4.5" stroke-linecap="round" fill="none"/>
-                    <!-- Arrow Head -->
                     <path d="M 22 84 L 26 97 L 40 92" stroke="#ef4444" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
                 </svg>
 
-                <img src="hero.jpg" alt="Workflow Automation Masterclass Preview" class="hero-media-image">
+                <img src="hero.jpg" alt="Workflow AI Automation Masterclass Preview" class="hero-media-image">
             </div>
 
             <p class="hero-step-3">
-                Automation moved me from simply looking for opportunities to building solutions businesses actually need.
+                AI Automation moved me from simply looking for opportunities to building solutions businesses actually need.
             </p>
 
             <p class="hero-step-4">
@@ -800,7 +827,7 @@
 
         <!-- UPPER CTA LINK -->
         <div class="cta-button-wrapper">
-            <a href="https://wa.me/2348061780610?text=To%20join%20the%20aai%20Automation%20Class" target="_blank" rel="noopener noreferrer" class="btn-call-to-action">
+            <a href="https://wa.me/2348061780610?text=I%20would%20like%20to%20Join%20the%20Automation%20Class" target="_blank" rel="noopener noreferrer" class="btn-call-to-action">
                 <span>Join the 2-Day</span>
                 <span>Masterclass</span>
             </a>
@@ -808,14 +835,14 @@
 
         <!-- SHORT STORY SECTION -->
         <section class="content-section-divider">
-            <h2 class="section-heading-title">Short Story</h2>
+            <h2 class="section-heading-title" style="text-align: right;">Short Story.</h2>
 
             <p class="story-paragraph-text">
                 I became a victim of a Ponzi scheme and ended up owing people about ₦5 million. It was a really difficult period. There were threats, pressure, and honestly, I felt like I had failed.
             </p>
 
             <p class="story-paragraph-text">
-                Then I discovered workflow automation.
+                Then I discovered AI automation.
             </p>
 
             <p class="story-paragraph-text">
@@ -839,7 +866,7 @@
             </p>
         </section>
 
-        <!-- CURRICULUM SECTION (PLAIN & CENTRALLY ALIGNED SESSIONS WITH ROUNDED IMAGE) -->
+        <!-- CURRICULUM SECTION -->
         <section class="content-section-divider">
             <h2 class="section-heading-title">What You Will Learn</h2>
 
@@ -853,27 +880,27 @@
                 <article class="session-info-card">
                     <h3 class="session-card-header">Session 1: Fundamentals</h3>
                     <p class="session-card-body">
-                        Understand how automation works, how n8n fits into it, and the basic building blocks behind an automated workflow.
+                        Understand how AI automation works, how n8n fits into it, and the basic building blocks behind an automated workflow.
                     </p>
                 </article>
 
                 <article class="session-info-card">
                     <h3 class="session-card-header">Session 2: Practical Workflows</h3>
                     <p class="session-card-body">
-                        Follow along as we build workflows and explore real situations where businesses can use automation.
+                        Follow along as we build workflows and explore real situations where businesses can use AI automation.
                     </p>
                 </article>
 
                 <article class="session-info-card">
                     <h3 class="session-card-header">Exclusive Session: Applied Skill</h3>
                     <p class="session-card-body">
-                        Understand how automation can become a service, what businesses are looking for, and how to start thinking about solutions people will actually pay for.
+                        Understand how AI automation can become a service, what businesses are looking for, and how to start thinking about solutions people will actually pay for.
                     </p>
                 </article>
             </div>
         </section>
 
-        <!-- FINAL CTA SECTION -->
+        <!-- FINAL CTA SECTION WITH IMAGE BEFORE BUTTON -->
         <section class="content-section-divider" id="join">
             <h2 class="section-heading-title">Your Next Move Is Simple</h2>
 
@@ -881,15 +908,20 @@
                 You're getting an introduction to a practical skill, a community to learn with, and a clearer idea of what you can build next.
             </p>
 
+            <!-- IMAGE ADDED JUST BEFORE "JOIN THE 2-DAY MASTERCLASS" -->
+            <div class="curriculum-image-container">
+                <img src="join.jpg" alt="Join the AI Automation Masterclass" class="curriculum-rounded-image">
+            </div>
+
             <div class="cta-button-wrapper" style="margin-bottom: 0;">
-                <a href="https://wa.me/2348061780610?text=To%20join%20the%20aai%20Automation%20Class" target="_blank" rel="noopener noreferrer" class="btn-call-to-action">
+                <a href="https://wa.me/2348061780610?text=I%20would%20like%20to%20Join%20the%20Automation%20Class" target="_blank" rel="noopener noreferrer" class="btn-call-to-action">
                     <span>Join the 2-Day</span>
                     <span>Masterclass</span>
                 </a>
             </div>
         </section>
 
-        <!-- URGENCY CARD (WITH BLUE "NOTE THIS" BADGE) -->
+        <!-- URGENCY CARD -->
         <div class="urgency-footer-card">
             <div class="urgency-badge-label">Note This ❗️</div>
             <p class="urgency-subtext-copy">If the response becomes too large, registration may close or the offer may change.</p>
@@ -906,7 +938,7 @@
                 <article class="faq-item-card">
                     <h3 class="faq-question-text">Do I need coding experience to join?</h3>
                     <p class="faq-answer-text">
-                        No prior coding skills are required. We focus on modern no-code and low-code workflow automation tools (like n8n) that allow you to connect systems visually and logically.
+                        No prior coding skills are required. We focus on modern no-code and low-code AI automation tools (like n8n) that allow you to connect systems visually and logically.
                     </p>
                 </article>
 
@@ -927,7 +959,7 @@
                 <article class="faq-item-card">
                     <h3 class="faq-question-text">How do I turn this skill into income?</h3>
                     <p class="faq-answer-text">
-                        Businesses suffer from manual data entry, slow customer responses, and tedious administration. You'll learn how to identify these exact pain points and offer automation solutions as a high-value service.
+                        Businesses suffer from manual data entry, slow customer responses, and tedious administration. You'll learn how to identify these exact pain points and offer AI automation solutions as a high-value service.
                     </p>
                 </article>
             </div>
@@ -945,13 +977,15 @@
 
             <div class="footer-banner-row">
                 <h2 class="footer-headline-text">
-                    Explore <u>workflow automation</u> masterclass.
+                    Learn A Skill, Earn With Skill, Today!
                 </h2>
                 <div class="footer-action-pills">
-                    <a href="https://wa.me/2348061780610?text=To%20join%20the%20aai%20Automation%20Class" target="_blank" rel="noopener noreferrer" class="btn-pill-primary">
+                    <!-- Footer Join Button -->
+                    <a href="https://wa.me/2348061780610?text=I%20would%20like%20to%20Join%20the%20Automation%20Class" target="_blank" rel="noopener noreferrer" class="btn-pill-primary">
                         Join Now
                     </a>
-                    <a href="#join" class="btn-pill-outline">
+                    <!-- Footer Learn More Button -->
+                    <a href="https://wa.me/2348061780610?text=I%20want%20to%20know%20more%20about%20AI%20automation." target="_blank" rel="noopener noreferrer" class="btn-pill-outline">
                         Learn More
                     </a>
                 </div>
@@ -967,6 +1001,17 @@
             </div>
         </div>
     </footer>
+
+    <!-- STICKY FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/2348061780610?text=I%27m%20interested%20in%20joining%20the%20AI%20automation%20Class." 
+       class="whatsapp-sticky-float" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 32 32" class="whatsapp-icon-svg" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#FFFFFF" d="M16 2a13 13 0 0 0-11 20L3 29l7.2-1.9A13 13 0 1 0 16 2zm0 23.8a10.8 10.8 0 0 1-5.5-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4A10.8 10.8 0 1 1 16 25.8zm5.9-8.1c-.3-.2-1.9-1-2.2-1.1s-.5-.2-.7.2-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 8.9 8.9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6s.3-.4.5-.5a1.8 1.8 0 0 0 .3-.5.6.6 0 0 0 0-.6c0-.2-.7-1.7-1-2.3s-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.7 3.7 0 0 0-1.2 2.8 6.4 6.4 0 0 0 1.3 3.4c.2.2 2.6 4 6.3 5.6 2.5 1 3.5.9 4.8.8a4 4 0 0 0 2.7-1.9 3.3 3.3 0 0 0 .2-1.9c-.1-.1-.4-.2-.7-.3z"/>
+        </svg>
+    </a>
 
     <!-- COUNTDOWN SCRIPT -->
     <script>
