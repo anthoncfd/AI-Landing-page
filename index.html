@@ -358,24 +358,45 @@
             padding: 0 8px;
         }
 
+        /* Curriculum Image Styling */
+        .curriculum-image-container {
+            width: 100%;
+            max-width: 520px;
+            margin: 8px auto 28px auto;
+            padding: 0 8px;
+        }
+
+        .curriculum-rounded-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--color-border-light);
+            box-shadow: var(--shadow-card);
+        }
+
+        /* Central Plain Sessions List Stack */
         .sessions-list-stack {
             display: flex;
             flex-direction: column;
-            gap: 14px;
+            gap: 28px;
             width: 100%;
+            text-align: center;
+            padding: 0 8px;
         }
 
-        /* What You Will Learn Cards (Borders Removed) */
         .session-info-card {
-            background-color: var(--color-bg-surface);
-            padding: 20px 18px;
+            background-color: transparent;
+            padding: 0;
             border: none;
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-subtle);
+            border-radius: 0;
+            box-shadow: none;
+            text-align: center;
         }
 
         .session-card-header {
-            font-size: 18px;
+            font-size: clamp(19px, 4.8vw, 22px);
             font-weight: 800;
             color: var(--color-accent-blue);
             margin-bottom: 6px;
@@ -384,9 +405,11 @@
         }
 
         .session-card-body {
-            font-size: 19px;
+            font-size: clamp(18px, 4.5vw, 20px);
             color: var(--color-text-secondary);
-            line-height: 1.5;
+            line-height: 1.55;
+            max-width: 680px;
+            margin: 0 auto;
         }
 
         /* ==========================================================================
@@ -816,30 +839,36 @@
             </p>
         </section>
 
-        <!-- CURRICULUM SECTION (BORDERLESS CARDS) -->
+        <!-- CURRICULUM SECTION (PLAIN & CENTRALLY ALIGNED SESSIONS WITH ROUNDED IMAGE) -->
         <section class="content-section-divider">
             <h2 class="section-heading-title">What You Will Learn</h2>
 
+            <!-- ROUNDED CURRICULUM IMAGE -->
+            <div class="curriculum-image-container">
+                <img src="curriculum.jpg" alt="Curriculum Overview" class="curriculum-rounded-image">
+            </div>
+
+            <!-- PLAIN CENTRALLY ALIGNED SESSIONS -->
             <div class="sessions-list-stack">
                 <article class="session-info-card">
-                    <div class="session-card-header">Session 1: Fundamentals</div>
-                    <div class="session-card-body">
+                    <h3 class="session-card-header">Session 1: Fundamentals</h3>
+                    <p class="session-card-body">
                         Understand how automation works, how n8n fits into it, and the basic building blocks behind an automated workflow.
-                    </div>
+                    </p>
                 </article>
 
                 <article class="session-info-card">
-                    <div class="session-card-header">Session 2: Practical Workflows</div>
-                    <div class="session-card-body">
+                    <h3 class="session-card-header">Session 2: Practical Workflows</h3>
+                    <p class="session-card-body">
                         Follow along as we build workflows and explore real situations where businesses can use automation.
-                    </div>
+                    </p>
                 </article>
 
                 <article class="session-info-card">
-                    <div class="session-card-header">Exclusive Session: Applied Skill</div>
-                    <div class="session-card-body">
+                    <h3 class="session-card-header">Exclusive Session: Applied Skill</h3>
+                    <p class="session-card-body">
                         Understand how automation can become a service, what businesses are looking for, and how to start thinking about solutions people will actually pay for.
-                    </div>
+                    </p>
                 </article>
             </div>
         </section>
