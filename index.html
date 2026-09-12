@@ -19,7 +19,7 @@
         :root {
             --color-bg-primary: #ffffff;
             --color-bg-surface: #f9fafb;
-            --color-bg-dark: #111827;
+            --color-bg-dark: #000000;
             --color-text-primary: #0f172a;
             --color-text-secondary: #334155;
             --color-text-muted: #64748b;
@@ -102,7 +102,7 @@
             position: relative;
             width: 100%;
             background-color: var(--color-bg-primary);
-            border-bottom: 1px solid var(--color-border-light); /* Subtle divider line */
+            border-bottom: 1px solid var(--color-border-light);
             padding: 12px 0 16px 0;
             margin-top: 4px;
             margin-bottom: 20px;
@@ -118,7 +118,6 @@
             margin: 0 auto;
         }
 
-        /* Left Side: Logo (Reduced Size) */
         .header-logo-block {
             display: flex;
             align-items: center;
@@ -126,13 +125,12 @@
         }
 
         .header-logo-img {
-            height: 36px; /* Reduced logo size */
+            height: 36px;
             width: auto;
             max-width: 160px;
             object-fit: contain;
         }
 
-        /* Right Side: Limited Offer (Centered Top) + Countdown Grid */
         .header-countdown-block {
             display: flex;
             flex-direction: column;
@@ -374,7 +372,7 @@
         }
 
         /* ==========================================================================
-           7. FAQ SECTION (Inspired by Image 1 - Dark modern aesthetic)
+           7. FAQ SECTION
            ========================================================================== */
         .faq-section-container {
             background-color: #0b1120;
@@ -439,55 +437,60 @@
 
         .faq-answer-text {
             font-size: 16px;
-            color: #94a3b8;
+            color: #ffffff;
             line-height: 1.55;
         }
 
         /* ==========================================================================
-           8. URGENCY CARD
+           8. URGENCY CARD (Color matched to footer background #000000)
            ========================================================================== */
         .urgency-footer-card {
-            background-color: var(--color-bg-dark);
-            color: var(--color-text-inverse);
-            padding: 24px 16px;
+            background-color: #000000;
+            color: #ffffff;
+            padding: 28px 18px;
             margin-top: 32px;
             border-radius: var(--radius-lg);
+            border: 1px solid #1a1a1a;
             width: 100%;
             text-align: center;
         }
 
         .urgency-badge-label {
-            color: var(--color-accent-yellow);
+            background-color: var(--color-accent-yellow);
+            color: #000000;
             font-weight: 800;
-            font-size: 16px;
+            font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 0.8px;
-            margin-bottom: 6px;
+            padding: 4px 14px;
+            border-radius: var(--radius-pill);
+            display: inline-block;
+            margin-bottom: 14px;
         }
 
         .urgency-subtext-copy {
             font-size: 18px;
-            color: #9ca3af;
+            color: #ffffff;
             line-height: 1.45;
-            margin-bottom: 14px;
+            margin-bottom: 16px;
         }
 
         .urgency-headline-bold {
             font-size: clamp(20px, 5.5vw, 28px);
             font-weight: 800;
             margin-top: 10px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             color: #ffffff;
             line-height: 1.35;
         }
 
         .urgency-footer-caption {
             font-size: 16px;
-            color: #6b7280;
+            color: #ffffff;
         }
 
         /* ==========================================================================
-           9. BRAND FOOTER (Inspired by Image 2 - High Contrast & Pill Action)
+           9. BRAND FOOTER (WITH LOGO SUPPORT)
            ========================================================================== */
         .site-footer-bar {
             background-color: #000000;
@@ -508,7 +511,20 @@
             margin: 0 auto;
             display: flex;
             flex-direction: column;
-            gap: 28px;
+            gap: 24px;
+        }
+
+        .footer-logo-block {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-logo-img {
+            height: 36px;
+            width: auto;
+            max-width: 160px;
+            object-fit: contain;
+            filter: brightness(0) invert(1); /* Inverts logo colors so dark logos show white on black */
         }
 
         .footer-banner-row {
@@ -592,7 +608,16 @@
 
         .footer-copy-text {
             font-size: 14px;
-            color: #6b7280;
+            color: #ffffff;
+        }
+
+        .footer-copy-text a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .footer-copy-text a:hover {
+            text-decoration: underline;
         }
 
         /* ==========================================================================
@@ -642,7 +667,7 @@
     <!-- TOP HEADER BAR: LOGO (LEFT) & LIMITED OFFER + COUNTDOWN (RIGHT) -->
     <header class="header-top-bar-wrapper">
         <div class="header-top-bar-container">
-            <!-- Left: Logo (Reduced Size) -->
+            <!-- Left: Logo -->
             <div class="header-logo-block">
                 <img src="logo1.png" alt="ThonLabs Logo" class="header-logo-img">
             </div>
@@ -692,35 +717,30 @@
             <p>Listen: You must have a good working phone (From 4GB RAM up) or a Laptop to build.</p>
         </div>
 
-        <!-- HERO TEXT SECTION IN 4 STEPS WITH EMBEDDED IMAGE -->
+        <!-- HERO TEXT SECTION -->
         <div class="hero-text-stack">
-            <!-- Step 1: Kicker / Tagline -->
             <div class="hero-step-1">
                 2-Day Live Automation Masterclass
             </div>
 
-            <!-- Step 2: Main Headline -->
             <h1 class="hero-step-2">
                 I Used This Skill to Clear My Debts and Still Had $2,000 Left.
             </h1>
 
-            <!-- HERO IMAGE (PLACED DIRECTLY BELOW STEP 2 HEADLINE) -->
             <div class="hero-media-container" id="heroImageBlock">
                 <img src="hero.jpg" alt="Workflow Automation Masterclass Preview" class="hero-media-image">
             </div>
 
-            <!-- Step 3: Core Sub-headline -->
             <p class="hero-step-3">
                 Automation moved me from simply looking for opportunities to building solutions businesses actually need.
             </p>
 
-            <!-- Step 4: Practical Action Statement -->
             <p class="hero-step-4">
                 In 2 days, I'll introduce you to the skill, show you how it works, and help you build your first practical workflows.
             </p>
         </div>
 
-        <!-- UPPER CTA LINK TO WHATSAPP -->
+        <!-- UPPER CTA LINK -->
         <div class="cta-button-wrapper">
             <a href="https://wa.me/2348061780610?text=To%20join%20the%20aai%20Automation%20Class" target="_blank" rel="noopener noreferrer" class="btn-call-to-action">
                 <span>Join the 2-Day</span>
@@ -789,7 +809,7 @@
             </div>
         </section>
 
-        <!-- FAQ SECTION (Inspired by Image 1 - Card/Solution structure adapted to FAQs) -->
+        <!-- FAQ SECTION -->
         <section class="faq-section-container">
             <h2 class="faq-header-title">Frequently Asked Questions</h2>
             <p class="faq-subtitle">Everything you need to know before joining the 2-day live training.</p>
@@ -833,7 +853,6 @@
                 You're getting an introduction to a practical skill, a community to learn with, and a clearer idea of what you can build next.
             </p>
 
-            <!-- LOWER CTA LINK TO WHATSAPP -->
             <div class="cta-button-wrapper" style="margin-bottom: 0;">
                 <a href="https://wa.me/2348061780610?text=To%20join%20the%20aai%20Automation%20Class" target="_blank" rel="noopener noreferrer" class="btn-call-to-action">
                     <span>Join the 2-Day</span>
@@ -852,9 +871,14 @@
 
     </main>
 
-    <!-- BRAND FOOTER (Inspired by Image 2 - Dark contrast aesthetic) -->
+    <!-- BRAND FOOTER (WITH LOGO) -->
     <footer class="site-footer-bar">
         <div class="footer-content-inner">
+            <!-- Footer Logo -->
+            <div class="footer-logo-block">
+                <img src="logo1.png" alt="ThonLabs Logo" class="footer-logo-img">
+            </div>
+
             <div class="footer-banner-row">
                 <h2 class="footer-headline-text">
                     Explore <u>workflow automation</u> masterclass.
@@ -871,10 +895,10 @@
 
             <div class="footer-bottom-divider">
                 <p class="footer-copy-text">
-                    &copy; ThonLabs Automation. All rights reserved.
+                    &copy; 2026 ThonLabs. All rights reserved.
                 </p>
                 <p class="footer-copy-text">
-                    Designed for builders, creators, and business strategists.
+                    <a href="#">Privacy Policy</a> &bull; <a href="#">Terms of Service</a>
                 </p>
             </div>
         </div>
