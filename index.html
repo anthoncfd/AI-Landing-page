@@ -102,9 +102,8 @@
             position: relative;
             width: 100%;
             background-color: var(--color-bg-primary);
-            border-bottom: 2px solid var(--color-text-primary);
-            border-top: 2px solid var(--color-text-primary);
-            padding: 10px 8px;
+            border: none; /* Lines removed */
+            padding: 10px 0;
             margin-top: 10px;
             margin-bottom: 16px;
         }
@@ -119,7 +118,7 @@
             margin: 0 auto;
         }
 
-        /* Left Side: Logo */
+        /* Left Side: Logo (Bigger) */
         .header-logo-block {
             display: flex;
             align-items: center;
@@ -127,19 +126,18 @@
         }
 
         .header-logo-img {
-            height: 40px;
+            height: 56px; /* Increased logo size */
             width: auto;
-            max-width: 150px;
+            max-width: 200px;
             object-fit: contain;
         }
 
-        /* Right Side: Limited Offer + Countdown */
+        /* Right Side: Limited Offer (Centered Top) + Countdown Grid */
         .header-countdown-block {
             display: flex;
             flex-direction: column;
-            align-items: flex-end;
-            text-align: right;
-            flex-grow: 1;
+            align-items: center;
+            text-align: center;
         }
 
         .countdown-header-title {
@@ -150,6 +148,8 @@
             color: var(--color-text-primary);
             margin-bottom: 4px;
             white-space: nowrap;
+            text-align: center;
+            width: 100%;
         }
 
         .flip-clock-grid {
@@ -423,8 +423,8 @@
             }
 
             .header-logo-img {
-                height: 48px;
-                max-width: 200px;
+                height: 68px;
+                max-width: 250px;
             }
 
             .flip-clock-grid {
