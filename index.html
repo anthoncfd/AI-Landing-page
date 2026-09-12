@@ -66,7 +66,7 @@
             background-color: var(--color-bg-primary) !important;
             color: var(--color-text-primary) !important;
             font-family: var(--font-family-base);
-            font-size: 27px; /* Updated body font size */
+            font-size: 20px; /* Reduced body font size */
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -97,31 +97,25 @@
         }
 
         /* ==========================================================================
-           3. COUNTDOWN TIMER COMPONENT (STICKY HEADER)
+           3. COUNTDOWN TIMER COMPONENT (NON-STICKY)
            ========================================================================== */
-        .countdown-sticky-wrapper {
-            position: -webkit-sticky;
-            position: sticky;
-            top: 0;
-            z-index: 100;
+        .countdown-top-wrapper {
+            position: relative; /* Normal flow, non-sticky */
             width: 100%;
-            background-color: rgba(255, 255, 255, 0.95);
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
+            background-color: var(--color-bg-primary);
             border-bottom: 1px solid var(--color-border-light);
-            box-shadow: var(--shadow-subtle);
+            padding: 8px 0;
         }
 
         .countdown-container {
             width: 100%;
             max-width: 100%;
             margin: 0;
-            padding: 6px 0;
             text-align: center;
         }
 
         .countdown-header-title {
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 800;
             letter-spacing: 0.8px;
             text-transform: uppercase;
@@ -134,7 +128,7 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 6px;
             width: 100%;
-            max-width: 320px;
+            max-width: 300px;
             margin: 0 auto;
             padding: 0 6px;
         }
@@ -149,7 +143,7 @@
             position: relative;
             background-color: var(--color-bg-surface);
             width: 100%;
-            height: 32px;
+            height: 30px;
             border-radius: var(--radius-sm);
             display: flex;
             align-items: center;
@@ -158,14 +152,14 @@
         }
 
         .flip-digit-display {
-            font-size: 17px;
+            font-size: 15px;
             font-weight: 800;
             color: var(--color-text-primary);
             font-variant-numeric: tabular-nums;
         }
 
         .unit-label-text {
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 700;
             letter-spacing: 0.5px;
             text-transform: uppercase;
@@ -174,13 +168,41 @@
         }
 
         /* ==========================================================================
-           4. HERO SECTION WITH 4 TYPOGRAPHIC STEPS
+           4. BRAND SPONSOR BADGE
+           ========================================================================== */
+        .sponsor-badge-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            margin: 16px 0 12px 0;
+            text-align: center;
+        }
+
+        .sponsor-label {
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--color-text-muted);
+        }
+
+        .sponsor-logo-img {
+            height: 32px;
+            width: auto;
+            max-width: 180px;
+            object-fit: contain;
+        }
+
+        /* ==========================================================================
+           5. HERO SECTION WITH 4 TYPOGRAPHIC STEPS + EMBEDDED IMAGE
            ========================================================================== */
         .page-content-wrapper {
             width: 100%;
             max-width: 100%;
             margin: 0;
-            padding: 16px 0 48px 0;
+            padding: 12px 0 40px 0;
             display: flex;
             flex-direction: column;
         }
@@ -192,13 +214,13 @@
             border-left: none;
             border-right: none;
             border-radius: 0;
-            padding: 12px 16px;
-            margin-bottom: 20px;
+            padding: 10px 14px;
+            margin-bottom: 16px;
             text-align: center;
         }
 
         .entrance-notice-banner p {
-            font-size: 22px;
+            font-size: 18px;
             font-weight: 600;
             color: #1e40af;
             line-height: 1.4;
@@ -210,53 +232,31 @@
             gap: 12px;
             text-align: center;
             padding: 0 8px;
-            margin-bottom: 20px;
         }
 
         /* Step 1: Kicker / Tagline */
         .hero-step-1 {
-            font-size: clamp(18px, 4.8vw, 24px);
+            font-size: clamp(15px, 4vw, 20px);
             font-weight: 800;
             letter-spacing: 0.08em;
             text-transform: uppercase;
             color: var(--color-accent-blue);
         }
 
-        /* Step 2: Main Title (Increased slightly) */
+        /* Step 2: Main Title (Slightly Reduced) */
         .hero-step-2 {
-            font-size: clamp(42px, 11vw, 72px);
+            font-size: clamp(32px, 8.5vw, 52px);
             line-height: 1.18;
             font-weight: 900;
             color: #000000;
             letter-spacing: -0.03em;
         }
 
-        /* Step 3: Core Sub-headline */
-        .hero-step-3 {
-            font-size: clamp(25px, 6.2vw, 32px);
-            line-height: 1.45;
-            font-weight: 600;
-            color: var(--color-text-primary);
-        }
-
-        /* Step 4: Practical Action Statement */
-        .hero-step-4 {
-            font-size: clamp(21px, 5.2vw, 27px);
-            line-height: 1.5;
-            color: var(--color-text-secondary);
-        }
-
-        /* Image placed directly below the 4 hero text steps */
+        /* Image placed directly below Step 2 headline */
         .hero-media-container {
             width: 100%;
-            margin: 12px 0 24px 0;
-            border-radius: 0;
-            overflow: hidden;
-            background-color: var(--color-bg-surface);
-            border-top: 1px solid var(--color-border-light);
-            border-bottom: 1px solid var(--color-border-light);
-            border-left: none;
-            border-right: none;
+            padding: 0 16px; /* Left & right padding */
+            margin: 16px 0;
         }
 
         .hero-media-image {
@@ -264,16 +264,34 @@
             width: 100%;
             height: auto;
             object-fit: cover;
+            border-radius: var(--radius-lg); /* Rounded edge */
+            border: 1px solid var(--color-border-light); /* Frame border */
+            box-shadow: var(--shadow-card);
+        }
+
+        /* Step 3: Core Sub-headline */
+        .hero-step-3 {
+            font-size: clamp(20px, 5vw, 26px);
+            line-height: 1.45;
+            font-weight: 600;
+            color: var(--color-text-primary);
+        }
+
+        /* Step 4: Practical Action Statement */
+        .hero-step-4 {
+            font-size: clamp(17px, 4.2vw, 22px);
+            line-height: 1.5;
+            color: var(--color-text-secondary);
         }
 
         /* ==========================================================================
-           5. CALL TO ACTION BUTTONS
+           6. CALL TO ACTION BUTTONS
            ========================================================================== */
         .cta-button-wrapper {
             display: flex;
             justify-content: center;
             width: 100%;
-            margin: 20px 0 32px 0;
+            margin: 24px 0 28px 0;
             padding: 0 8px;
         }
 
@@ -283,11 +301,11 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            min-height: 68px;
-            padding: 14px 24px;
+            min-height: 62px;
+            padding: 12px 20px;
             background-color: var(--color-accent-blue);
             color: var(--color-text-inverse) !important;
-            font-size: clamp(22px, 5.5vw, 26px);
+            font-size: clamp(18px, 4.8vw, 22px);
             font-weight: 700;
             text-decoration: none;
             border-radius: var(--radius-pill);
@@ -306,30 +324,30 @@
         }
 
         /* ==========================================================================
-           6. STORY & CURRICULUM SECTIONS
+           7. STORY & CURRICULUM SECTIONS
            ========================================================================== */
         .content-section-divider {
             width: 100%;
             border-top: 1px solid var(--color-border-light);
-            padding-top: 28px;
+            padding-top: 24px;
             margin-top: 20px;
         }
 
         .section-heading-title {
-            font-size: clamp(32px, 8.5vw, 46px);
+            font-size: clamp(26px, 7vw, 36px);
             font-weight: 800;
             color: #000000;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             text-align: center;
             letter-spacing: -0.025em;
             padding: 0 8px;
         }
 
         .story-paragraph-text {
-            font-size: clamp(22px, 5.5vw, 27px);
+            font-size: clamp(18px, 4.5vw, 22px);
             line-height: 1.6;
             color: var(--color-text-secondary);
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             text-align: left;
             padding: 0 8px;
         }
@@ -337,14 +355,14 @@
         .sessions-list-stack {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 14px;
             width: 100%;
         }
 
         .session-info-card {
             background-color: var(--color-bg-surface);
             border-radius: 0;
-            padding: 20px 12px;
+            padding: 16px 12px;
             border-top: 1px solid var(--color-border-subtle);
             border-bottom: 1px solid var(--color-border-subtle);
             border-left: none;
@@ -353,29 +371,29 @@
         }
 
         .session-card-header {
-            font-size: 22px;
+            font-size: 18px;
             font-weight: 800;
             color: var(--color-accent-blue);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
         .session-card-body {
-            font-size: 24px;
+            font-size: 19px;
             color: var(--color-text-secondary);
             line-height: 1.5;
         }
 
         /* ==========================================================================
-           7. URGENCY FOOTER BLOCK
+           8. URGENCY FOOTER BLOCK
            ========================================================================== */
         .urgency-footer-card {
             background-color: var(--color-bg-dark);
             color: var(--color-text-inverse);
-            padding: 28px 16px;
+            padding: 24px 16px;
             border-radius: 0;
-            margin-top: 36px;
+            margin-top: 32px;
             width: 100%;
             text-align: center;
         }
@@ -383,35 +401,35 @@
         .urgency-badge-label {
             color: var(--color-accent-yellow);
             font-weight: 800;
-            font-size: 20px;
+            font-size: 16px;
             text-transform: uppercase;
             letter-spacing: 0.8px;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .urgency-subtext-copy {
-            font-size: 22px;
+            font-size: 18px;
             color: #9ca3af;
             line-height: 1.45;
-            margin-bottom: 16px;
+            margin-bottom: 14px;
         }
 
         .urgency-headline-bold {
-            font-size: clamp(24px, 6.5vw, 34px);
+            font-size: clamp(20px, 5.5vw, 28px);
             font-weight: 800;
-            margin-top: 12px;
-            margin-bottom: 12px;
+            margin-top: 10px;
+            margin-bottom: 10px;
             color: #ffffff;
             line-height: 1.35;
         }
 
         .urgency-footer-caption {
-            font-size: 20px;
+            font-size: 16px;
             color: #6b7280;
         }
 
         /* ==========================================================================
-           8. DESKTOP / TABLET BREAKPOINT ENHANCEMENTS
+           9. DESKTOP / TABLET BREAKPOINT ENHANCEMENTS
            ========================================================================== */
         @media (min-width: 640px) {
             body {
@@ -419,36 +437,42 @@
             }
 
             .page-content-wrapper {
-                padding: 32px 0 64px 0;
+                padding: 24px 0 56px 0;
+            }
+
+            .hero-media-container {
+                max-width: 640px;
+                margin: 20px auto;
+                padding: 0 24px;
             }
 
             .flip-card-face {
-                height: 38px;
+                height: 34px;
             }
 
             .flip-digit-display {
-                font-size: 22px;
+                font-size: 18px;
             }
 
             .btn-call-to-action {
-                max-width: 540px;
-                font-size: 28px;
+                max-width: 480px;
+                font-size: 24px;
             }
 
             .session-info-card {
-                padding: 24px 20px;
+                padding: 20px 20px;
             }
 
             .urgency-footer-card {
-                padding: 36px 24px;
+                padding: 32px 24px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- STICKY COUNTDOWN HEADER -->
-    <header class="countdown-sticky-wrapper">
+    <!-- NON-STICKY COUNTDOWN HEADER -->
+    <header class="countdown-top-wrapper">
         <div class="countdown-container">
             <div class="countdown-header-title">LIMITED SPECIAL OFFER</div>
             
@@ -492,9 +516,15 @@
             <p>Listen: You must have a good working phone (From 4GB RAM up) or a Laptop to build.</p>
         </div>
 
-        <!-- HERO TEXT SECTION IN 4 STEPS -->
+        <!-- SPONSOR LOGO BADGE -->
+        <div class="sponsor-badge-wrapper">
+            <span class="sponsor-label">Sponsored by:</span>
+            <img src="logo.png" alt="ThonLabs Logo" class="sponsor-logo-img">
+        </div>
+
+        <!-- HERO TEXT SECTION IN 4 STEPS WITH EMBEDDED IMAGE -->
         <div class="hero-text-stack">
-            <!-- Step 1: Eyebrow Tagline -->
+            <!-- Step 1: Kicker / Tagline -->
             <div class="hero-step-1">
                 2-Day Live Automation Masterclass
             </div>
@@ -503,6 +533,11 @@
             <h1 class="hero-step-2">
                 I Used This Skill to Clear My Debts and Still Had $2,000 Left.
             </h1>
+
+            <!-- HERO IMAGE (PLACED DIRECTLY BELOW STEP 2 HEADLINE) -->
+            <div class="hero-media-container" id="heroImageBlock">
+                <img src="hero.jpg" alt="Workflow Automation Masterclass Preview" class="hero-media-image">
+            </div>
 
             <!-- Step 3: Core Sub-headline -->
             <p class="hero-step-3">
@@ -513,11 +548,6 @@
             <p class="hero-step-4">
                 In 2 days, I'll introduce you to the skill, show you how it works, and help you build your first practical workflows.
             </p>
-        </div>
-
-        <!-- HERO IMAGE (PLACED DIRECTLY BELOW THE HERO TEXT) -->
-        <div class="hero-media-container" id="heroImageBlock">
-            <img src="hero.jpg" alt="Workflow Automation Masterclass Preview" class="hero-media-image" onerror="var b = document.getElementById('heroImageBlock'); if(b) b.style.display='none';">
         </div>
 
         <!-- UPPER CTA LINK TO WHATSAPP -->
